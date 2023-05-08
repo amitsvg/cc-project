@@ -1,8 +1,9 @@
 // Make an API request to fetch the latest 2 entries from the channel
-fetch('https://api.thingspeak.com/channels/2129271/feeds.json?results=2')
+fetch('https://api.thingspeak.com/channels/2129271/feeds.json?results=1')
   .then(response => response.json())
   .then(data => {
     // Get the latest entry from the feeds array
+    // console.log(data);
     const latestEntry = data.feeds[0];
 
     // Update the value of Box 1 with the value of field1 from the latest entry
